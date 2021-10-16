@@ -1,7 +1,7 @@
 -- called from /init.lua
 local raw_loadfile = ...
 
-_G._OSVERSION = "untitled-System"
+_G._OSVERSION = "kazu55-Interface-System 0.0.0"
 
 -- luacheck: globals component computer unicode _OSVERSION
 local component = component
