@@ -17,7 +17,8 @@ filesystemDialog.onSubmit = function(path)
 end
 
 panel:addChild(GUI.roundedButton(workspace.width, workspace.height, 6, 3, 0xFFFFFF, 0x555555, 0x880000, 0xFFFFFF, "Run the program")).onTouch = function()
-  
+  filesystemDialog:show()
+end
 
 local power = workspace:addChild(GUI.titledWindow(25, 11, 60, 20, "Reboot and Shutdown", true))
 -- Attach an single cell layout to it
