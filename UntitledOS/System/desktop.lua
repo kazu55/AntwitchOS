@@ -13,8 +13,7 @@ local filesystemDialog = GUI.addFilesystemDialog(workspace, false, 50, math.floo
 filesystemDialog:setMode(GUI.IO_MODE_OPEN, GUI.IO_MODE_FILE)
 filesystemDialog:addExtensionFilter(".lua")
 filesystemDialog.onSubmit = function(path)
-  local proc = thread.create(os.execute, path)
-  proc:detach() -- # detach from current process
+  os.execute(path)
 end
 
 workspace:addChild(GUI.roundedButton(1, workspace.height - 1, 6, 3, 0xFFFFFF, 0x555555, 0x880000, 0xFFFFFF, " ")).onTouch = function()
