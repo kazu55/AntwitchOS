@@ -5,6 +5,7 @@ local text = require("text")
 local com = require('component')
 local gpu = com.gpu
 
+
 ----------------------------------------------------------------------------------------------------
 
 term.clear()
