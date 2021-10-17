@@ -1,6 +1,7 @@
 GUI = require("GUI")
 local computer = require("computer")
 local thread = require "thread"
+local os = require("os")
 
 
 --------------------------------------------------------------------------------
@@ -14,6 +15,7 @@ filesystemDialog:addExtensionFilter(".lua")
 filesystemDialog.onSubmit = function(path)
   local proc = thread.create(os.execute, path)
   proc:detach() -- # detach from current process
+  os.exit()
 end
 
 workspace:addChild(GUI.roundedButton(1, workspace.height - 1, 6, 3, 0xFFFFFF, 0x555555, 0x880000, 0xFFFFFF, " ")).onTouch = function()
