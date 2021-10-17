@@ -9,7 +9,7 @@ workspace:addChild(GUI.panel(1, 1, workspace.width, workspace.height, 0x2D2D2D))
 -- Add menu object to workspace
 local menu = workspace:addChild(GUI.menu(1, 1, workspace.width, 0xEEEEEE, 0x666666, 0x3366CC, 0xFFFFFF))
 -- Add context menu and few items to it
-local contextMenu = menu:addItem("test")
+local contextMenu = menu:addcontextMenu("test")
 contextMenu:addItem("PowerOFF").onTouch = function()
   computer.shutdown()
 end
