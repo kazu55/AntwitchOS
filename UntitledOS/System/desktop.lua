@@ -4,7 +4,9 @@ local computer = require("computer")
 --------------------------------------------------------------------------------
 
 local workspace = GUI.workspace()
-workspace:addChild(GUI.panel(1, 1, workspace.width, workspace.height, 0x2D2D2D))
+local panel = workspace:addChild(GUI.panel(1, 1, workspace.width, workspace.height, 0x2D2D2D))
+layout:addChild(GUI.roundedButton(workspace.width, workspace.height, 6, 3, 0xFFFFFF, 0x555555, 0x880000, 0xFFFFFF, "Pinned"))
+
 
 local power = workspace:addChild(GUI.titledWindow(25, 11, 60, 20, "Reboot and Shutdown", true))
 -- Attach an single cell layout to it
