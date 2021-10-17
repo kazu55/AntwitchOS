@@ -4,6 +4,7 @@ local term = require("term")
 local text = require("text")
 local com = require('component')
 local gpu = com.gpu
+local shell = require("shell")
 
 
 ----------------------------------------------------------------------------------------------------
