@@ -16,7 +16,7 @@ filesystemDialog.onSubmit = function(path)
   proc:detach() -- # detach from current process
 end
 
-workspace:addChild(GUI.roundedButton(1, workspace.height, 6, 3, 0xFFFFFF, 0x555555, 0x880000, 0xFFFFFF, "Run the program")).onTouch = function()
+workspace:addChild(GUI.roundedButton(1, workspace.height - 3, 6, 3, 0xFFFFFF, 0x555555, 0x880000, 0xFFFFFF, "Run the program")).onTouch = function()
   filesystemDialog:show()
 end
 
