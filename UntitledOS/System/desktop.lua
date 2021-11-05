@@ -15,10 +15,6 @@ filesystemChooser.onSubmit = function(path)
 	os.execute(path)
 end
 
-workspace:addChild(GUI.roundedButton(1, workspace.height - 1, 6, 3, 0xFFFFFF, 0x555555, 0x880000, 0xFFFFFF, " ")).onTouch = function()
-  filesystemDialog:show()
-end
-
 local power = workspace:addChild(GUI.titledWindow(25, 11, 60, 20, "Reboot and Shutdown", true))
 -- Attach an single cell layout to it
 local layout = power:addChild(GUI.layout(1, 2, power.width, power.height - 1, 1, 1))
