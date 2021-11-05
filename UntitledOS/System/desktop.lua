@@ -9,11 +9,10 @@ local os = require("os")
 local workspace = GUI.workspace()
 local panel = workspace:addChild(GUI.panel(1, 1, workspace.width, workspace.height, 0x2D2D2D))
 
-local filesystemDialog = GUI.addFilesystemDialog(workspace, false, 50, math.floor(workspace.height * 0.8), "Open", "Cancel", "File name", "/")
-filesystemDialog:setMode(GUI.IO_MODE_OPEN, GUI.IO_MODE_FILE)
-filesystemDialog:addExtensionFilter(".lua")
-filesystemDialog.onSubmit = function(path)
-  os.execute(path)
+local filesystemChooser = workspace:addChild(GUI.filesystemChooser(2, 2, 30, 3, 0xE1E1E1, 0x888888, 0x3C3C3C, 0x888888, nil, "Open", "Cancel", "Choose", "/"))
+filesystemChooser:setMode(GUI.IO_MODE_OPEN, GUI.IO_MODE_FILE)
+filesystemChooser.onSubmit = function(path)
+	os.execute(path)
 end
 
 workspace:addChild(GUI.roundedButton(1, workspace.height - 1, 6, 3, 0xFFFFFF, 0x555555, 0x880000, 0xFFFFFF, " ")).onTouch = function()
