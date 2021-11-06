@@ -12,6 +12,7 @@ filesystemDialog:addExtensionFilter(".lua")
 filesystemDialog:addExtensionFilter(".txt")
 filesystemDialog.onSubmit = function(path)
   os.execute("edit" .. path)
+  os.exit()
 end
 
 filesystemDialog:show()
