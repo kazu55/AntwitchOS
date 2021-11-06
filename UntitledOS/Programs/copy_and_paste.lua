@@ -10,6 +10,7 @@ local filesystemDialogy = GUI.addFilesystemDialog(workspace, false, 50, math.flo
 filesystemDialogy:setMode(GUI.IO_MODE_OPEN, GUI.IO_MODE_FILE)
 filesystemDialogy.onSubmit = function(pathy)
   os.execute("cp " .. pathx .. " " .. pathy)
+  os.exit()
 end
 
 local filesystemDialogx = GUI.addFilesystemDialog(workspace, false, 50, math.floor(workspace.height * 0.8), "Copy", "Cancel", "File name", "/")
