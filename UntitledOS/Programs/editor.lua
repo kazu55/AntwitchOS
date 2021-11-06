@@ -11,8 +11,12 @@ filesystemDialog:setMode(GUI.IO_MODE_OPEN, GUI.IO_MODE_FILE)
 filesystemDialog:addExtensionFilter(".lua")
 filesystemDialog:addExtensionFilter(".txt")
 filesystemDialog.onSubmit = function(path)
+  os.execute("edit" .. path)
 end
 
 filesystemDialog:show()
 
-os.execute("edit" .. path)
+--------------------------------------------------------------------------------
+
+workspace:draw()
+workspace:start()
