@@ -57,6 +57,10 @@ local files                     = {
         url  = "https://raw.githubusercontent.com/kazu55/testos/master/autorun.lua",
         path = "/autorun.lua"
     },
+	{
+        url  = "https://raw.githubusercontent.com/kazu55/testos/master/UntitledOS/Programs/download.lua",
+        path = "/UntitledOS/Programs/download.lua"
+    },
 }
 
 local properties                = {
