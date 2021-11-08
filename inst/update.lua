@@ -37,6 +37,10 @@ local files                     = {
         url  = "https://raw.githubusercontent.com/kazu55/testos/master/lib/uac.lua",
         path = "/lib/uac.lua"
     },
+    {
+        url  = "https://raw.githubusercontent.com/kazu55/testos/master/inst/update.lua",
+        path = "/UntitledOS/Programs/update.lua"
+    },
 }
 
 local properties                = {
@@ -56,7 +60,8 @@ local properties                = {
         totalProgress = "Total progress: <totalProgress>%",
         -- Comment this lines to automatically close installer window
         finished1     = "testOS has been successfully updated.",
-        finished2     = "Press any key to quit."
+        finished2     = "Please restart your computer."
+	finished3     = "Press any key to quit."
     },
     -- Customize color scheme as you want to
     colors            = {
@@ -247,6 +252,7 @@ if properties.localization.finished1 then
     rectangle(properties.windowX, properties.windowY + 1, properties.windowWidth, properties.windowHeight - 1, properties.colors.window.background)
     centerizedText(properties.windowY + 3, properties.colors.window.text, properties.localization.finished1)
     centerizedText(properties.windowY + 4, properties.colors.window.text, properties.localization.finished2)
+    centerizedText(properties.windowY + 5, properties.colors.window.text, properties.localization.finished3)
     
     while true do
         local eventType = event.pull()
