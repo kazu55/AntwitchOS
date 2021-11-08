@@ -65,6 +65,10 @@ local files                     = {
         url  = "https://raw.githubusercontent.com/kazu55/testos/master/lib/uac.lua",
         path = "/lib/uac.lua"
     },
+    {
+        url  = "https://raw.githubusercontent.com/kazu55/testos/master/inst/update.lua",
+        path = "/UntitledOS/Programs/update.lua"
+    },
 }
 
 local properties                = {
