@@ -87,8 +87,9 @@ local properties                = {
         currentFile   = "Downloading \"<currentFile>\"",
         totalProgress = "Total progress: <totalProgress>%",
         -- Comment this lines to automatically close installer window
-        finished1     = "testOS has been successfully installed.",
-        finished2     = "Press any key to quit."
+        finished1     = "testOS has been successfully updated.",
+        finished2     = "Please restart your computer."
+	finished3     = "Press any key to quit."
     },
     -- Customize color scheme as you want to
     colors            = {
@@ -279,6 +280,7 @@ if properties.localization.finished1 then
     rectangle(properties.windowX, properties.windowY + 1, properties.windowWidth, properties.windowHeight - 1, properties.colors.window.background)
     centerizedText(properties.windowY + 3, properties.colors.window.text, properties.localization.finished1)
     centerizedText(properties.windowY + 4, properties.colors.window.text, properties.localization.finished2)
+    centerizedText(properties.windowY + 5, properties.colors.window.text, properties.localization.finished3)
     
     while true do
         local eventType = event.pull()
