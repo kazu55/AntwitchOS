@@ -8,10 +8,8 @@ function run()
   print("Please enter your password. The initial value is 0000.")
   passinput = io.read()
   if passinput == rootpasswd then
-    return "true"
-    os.exit()
+    return 0
   else
-    return "false"
-    os.exit()
+    return 1
   end
 end
