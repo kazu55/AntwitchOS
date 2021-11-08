@@ -1,6 +1,7 @@
 local term = require("term")
 local GUI = require("GUI")
 local io = require("io")
+local os = require("os")
 local rootpasswd = "0000"
 function run()
   term.clear()
@@ -8,7 +9,9 @@ function run()
   passinput = io.read()
   if passinput == rootpasswd then
     return "true"
+    os.exit()
   else
     return "false"
+    os.exit()
   end
 end
