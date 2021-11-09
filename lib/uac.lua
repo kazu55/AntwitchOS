@@ -5,7 +5,7 @@ local os = require("os")
 rootpasswd = "0000"
 function uac.run()
   term.clear()
-  print("Please enter your password. The initial value is 0000.")
+  print("Please enter your password.")
   passinput = io.read()
   if passinput == rootpasswd then
     return 0
