@@ -3,7 +3,7 @@ local GUI = require("GUI")
 local io = require("io")
 local os = require("os")
 rootpasswd = "0000"
-function run()
+function uac.run()
   term.clear()
   print("Please enter your password. The initial value is 0000.")
   passinput = io.read()
