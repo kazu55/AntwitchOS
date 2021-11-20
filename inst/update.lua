@@ -26,7 +26,7 @@ local files                     = {
         path = "/UntitledOS/temp/Programs/editor.lua"
     },
 	{
-        url  = "https://raw.githubusercontent.com/kazu55/testos/master/autorun.lua",
+        url  = "https://raw.githubusercontent.com/kazu55/testos/master/tautorun.lua",
         path = "/autorun.lua"
     },
 	{
