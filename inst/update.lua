@@ -11,7 +11,7 @@ local internet                  = component.internet
 local files                     = {
     {
         url  = "https://raw.githubusercontent.com/kazu55/testos/master/UntitledOS/System/desktop.lua",
-        path = "/UntitledOS/System/desktop.lua"
+        path = "/UntitledOS/temp/System/desktop.lua"
     },
 	{
         url  = "https://raw.githubusercontent.com/kazu55/testos/master/lib/core/boot.lua",
@@ -19,11 +19,11 @@ local files                     = {
     },
 	{
         url  = "https://raw.githubusercontent.com/kazu55/testos/master/UntitledOS/System/sys-start.lua",
-        path = "/UntitledOS/System/sys-start.lua"
+        path = "/UntitledOS/temp/System/sys-start.lua"
     },
 	{
         url  = "https://raw.githubusercontent.com/kazu55/testos/master/UntitledOS/Programs/editor.lua",
-        path = "/UntitledOS/Programs/editor.lua"
+        path = "/UntitledOS/temp/Programs/editor.lua"
     },
 	{
         url  = "https://raw.githubusercontent.com/kazu55/testos/master/autorun.lua",
@@ -31,7 +31,7 @@ local files                     = {
     },
 	{
         url  = "https://raw.githubusercontent.com/kazu55/testos/master/UntitledOS/Programs/download.lua",
-        path = "/UntitledOS/Programs/download.lua"
+        path = "/UntitledOS/temp/Programs/download.lua"
     },
   {
         url  = "https://raw.githubusercontent.com/kazu55/testos/master/lib/uac.lua",
@@ -39,7 +39,7 @@ local files                     = {
     },
     {
         url  = "https://raw.githubusercontent.com/kazu55/testos/master/inst/update.lua",
-        path = "/UntitledOS/Programs/update.lua"
+        path = "/UntitledOS/temp/Programs/update.lua"
     },
 }
 
