@@ -9,7 +9,7 @@ local os = require("os")
 local workspace = GUI.workspace()
 local panel = workspace:addChild(GUI.panel(1, 1, workspace.width, workspace.height, 0x2D2D2D))
 
-local filesystemChooser = workspace:addChild(GUI.filesystemChooser(1, 1, 3, 3, 0xE1E1E1, 0x888888, 0x3C3C3C, 0x888888, nil, "Open", "Cancel", "Choose", "/UntitledOS/Programs"))
+local filesystemChooser = workspace:addChild(GUI.filesystemChooser(1, 1, 3, 3, 0xE1E1E1, 0x888888, 0x3C3C3C, 0x888888, nil, "Open", "Cancel", "Choose", "/UntitledOS/Programs/"))
 filesystemChooser:setMode(GUI.IO_MODE_OPEN, GUI.IO_MODE_FILE)
 filesystemChooser.onSubmit = function(path)
 	os.execute(path)
