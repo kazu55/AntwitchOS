@@ -20,12 +20,9 @@ local power = workspace:addChild(GUI.titledWindow(25, 11, 60, 20, "Reboot and Sh
 local layout = power:addChild(GUI.layout(1, 2, power.width, power.height - 1, 1, 1))
 -- Add some stuff to layout
 layout:addChild(GUI.roundedButton(2, 18, 30, 3, 0xFFFFFF, 0x555555, 0x880000, 0xFFFFFF, "Shutdown")).onTouch = function()
-    
-  GUI.alert("GoodBye")
   computer.shutdown()
 end
 layout:addChild(GUI.roundedButton(2, 18, 30, 3, 0xFFFFFF, 0x555555, 0x880000, 0xFFFFFF, "Reboot")).onTouch = function()
-  GUI.alert("Rebooting Computer")
   computer.shutdown(true)
 end
 
