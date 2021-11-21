@@ -11,7 +11,7 @@ local shell = require("shell")
 
 term.clear()
 local width, height = gpu.getResolution()
-local text = "untitledsystem Running..."
+local text = "AntwitchUI is Running..."
 
 gpu.set(width / 2 - #text / 2, height / 2, text)
 
