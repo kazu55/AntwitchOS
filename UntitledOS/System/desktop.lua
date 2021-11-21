@@ -14,7 +14,7 @@ local menu = workspace:addChild(GUI.menu(1, 1, workspace.width, 0xEEEEEE, 0x6666
 -- Add first item with black color. Attack a callback-function to it
 menu:addItem("Applications", 0x0).onTouch = function()
 	local container = GUI.addBackgroundContainer(workspace, true, true, " ")
-	local tree2 = container.layout:addChild(GUI.filesystemTree(34, 2, 30, 41, 0xCCCCCC, 0x3C3C3C, 0x3C3C3C, 0x999999, 0x3C3C3C, 0xE1E1E1, 0xBBBBBB, 0xAAAAAA, 0xBBBBBB, 0x444444, GUI.IO_MODE_FILE, GUI.IO_MODE_FILE))
+	local tree2 = container.layout:addChild(GUI.filesystemTree(34, 2, 30, 41, 0xCCCCCC, 0x3C3C3C, 0x3C3C3C, 0x999999, 0x3C3C3C, 0xE1E1E1, 0xBBBBBB, 0xAAAAAA, 0xBBBBBB, 0x444444, GUI.IO_MODE_BOTH, GUI.IO_MODE_FILE))
 	tree2:updateFileList()
 	tree2.onItemSelected = function(path)
 		os.execute(path)
