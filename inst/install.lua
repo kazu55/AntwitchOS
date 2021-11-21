@@ -82,12 +82,12 @@ local properties                = {
     -- Customize localization as you want to
     localization      = {
         -- Specify title of your installer
-        title         = "testOS Installer",
+        title         = "AntwitchOS Installer",
         -- Use <currentProgress>, <totalProgress> and <currentFile> text insertions to automatically display their values
         currentFile   = "Downloading \"<currentFile>\"",
         totalProgress = "Total progress: <totalProgress>%",
         -- Comment this lines to automatically close installer window
-        finished1     = "testOS has been successfully updated.",
+        finished1     = "AntwitchOS has been successfully updated.",
         finished2     = "Please restart your computer.",
 	finished3     = "Press any key to quit."
     },
