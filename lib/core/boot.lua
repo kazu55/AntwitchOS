@@ -1,7 +1,7 @@
 -- called from /init.lua
 local raw_loadfile = ...
 
-_G._OSVERSION = "kazu55-Interface-System 0.0.0"
+_G._OSVERSION = "AntwitchOS"
 
 -- luacheck: globals component computer unicode _OSVERSION
 local component = component
@@ -84,7 +84,6 @@ local function dofile(file)
   end
 end
 
-status("Initializing package management...")
 
 -- Load file system related libraries we need to load other stuff moree
 -- comfortably. This is basically wrapper stuff for the file streams
@@ -111,13 +110,11 @@ do
   _G.io = dofile("/lib/io.lua")
 end
 
-status("Initializing file system...")
 
 -- Mount the ROM and temporary file systems to allow working on the file
 -- system module from this point on.
 require("filesystem").mount(computer.getBootAddress(), "/")
 
-status("Running boot scripts...")
 
 -- Run library startup scripts. These mostly initialize event handlers.
 local function rom_invoke(method, ...)
@@ -136,13 +133,11 @@ for i = 1, #scripts do
   dofile(scripts[i])
 end
 
-status("Initializing components...")
 
 for c, t in component.list() do
   computer.pushSignal("component_added", c, t)
 end
 
-status("Initializing system...")
 
 computer.pushSignal("init") -- so libs know components are initialized.
 require("event").pull(1, "init") -- Allow init processing.
