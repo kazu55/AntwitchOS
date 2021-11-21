@@ -9,10 +9,17 @@ local os = require("os")
 local workspace = GUI.workspace()
 local panel = workspace:addChild(GUI.panel(1, 1, workspace.width, workspace.height, 0x2D2D2D))
 
-local filesystemChooser = workspace:addChild(GUI.filesystemChooser(1, 1, 3, 3, 0xE1E1E1, 0x888888, 0x3C3C3C, 0x888888, nil, "Open", "Cancel", "Choose", "/UntitledOS/Programs/"))
-filesystemChooser:setMode(GUI.IO_MODE_OPEN, GUI.IO_MODE_FILE)
-filesystemChooser.onSubmit = function(path)
-	os.execute(path)
+-- Add menu object to workspace
+local menu = workspace:addChild(GUI.menu(1, 1, workspace.width, 0xEEEEEE, 0x666666, 0x3366CC, 0xFFFFFF))
+-- Add first item with black color. Attack a callback-function to it
+menu:addItem("Applications", 0x0).onTouch = function()
+	local container = GUI.addBackgroundContainer(workspace, true, true, " ")
+	local filesystemDialog = GUI.addFilesystemDialog(workspace, false, 50, math.floor(workspace.height * 0.8), "Open", "Cancel", "File name", "/UntitledOS/Programs/")
+	filesystemDialog:setMode(GUI.IO_MODE_OPEN, GUI.IO_MODE_FILE)
+	filesystemDialog:addExtensionFilter(".lua")
+	filesystemDialog.onSubmit = function(path)
+		os.execute(path)
+	end
 end
 
 local power = workspace:addChild(GUI.titledWindow(25, 11, 60, 20, "Reboot and Shutdown", true))
