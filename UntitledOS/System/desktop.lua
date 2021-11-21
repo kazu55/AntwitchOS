@@ -19,6 +19,8 @@ menu:addItem("Applications", 0x0).onTouch = function()
 	tree2.onItemSelected = function(path)
 		os.execute(path)
 	end
+	workspace:draw()
+	workspace:start()
 end
 
 local power = workspace:addChild(GUI.titledWindow(25, 11, 60, 20, "Reboot and Shutdown", true))
