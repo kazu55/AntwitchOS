@@ -20,6 +20,7 @@ menu:addItem("Applications", 0x0).onTouch = function()
 	filesystemDialog.onSubmit = function(path)
 		os.execute(path)
 	end
+	filesystemDialog:show()
 end
 
 local power = workspace:addChild(GUI.titledWindow(25, 11, 60, 20, "Reboot and Shutdown", true))
