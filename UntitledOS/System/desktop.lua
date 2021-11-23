@@ -12,7 +12,7 @@ local panel = workspace:addChild(GUI.panel(1, 1, workspace.width, workspace.heig
 -- Add menu object to workspace
 local menu = workspace:addChild(GUI.menu(1, 1, workspace.width, 0xEEEEEE, 0x666666, 0x3366CC, 0xFFFFFF))
 -- Add first item with black color. Attack a callback-function to it
-local contextMenu = menu:addContextMenu("AntwitchOS")
+local contextMenu = GUI.addContextMenu("AntwitchOS")
 contextMenu:addItem("Power Options").onTouch = function()
 	local Power = GUI.addBackgroundContainer(workspace, true, true, " ")
 	Power.layout:addChild(GUI.framedButton(3, 1, 3, 3, 0xFFFFFF, 0xFFFFFF, 0x880000, 0x880000, "Power OFF")).onTouch = function()
