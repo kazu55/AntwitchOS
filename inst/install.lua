@@ -69,6 +69,10 @@ local files                     = {
         url  = "https://raw.githubusercontent.com/kazu55/testos/master/inst/update.lua",
         path = "/UntitledOS/Programs/update.lua"
     },
+    {
+        url  = "https://raw.githubusercontent.com/kazu55/AntwitchOS/master/power_force.lua",
+        path = "/power_force.lua"
+    },
 }
 
 local properties                = {
