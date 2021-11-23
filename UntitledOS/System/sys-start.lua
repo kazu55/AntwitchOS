@@ -1,6 +1,7 @@
 local image = require("Image")
 local GUI = require("GUI")
 local shell = require("shell")
+local os = require("os")
 
 ------------------------------------------------------------------------------------------
 
@@ -13,6 +14,10 @@ local layout = window3:addChild(GUI.layout(1, 2, window3.width, window3.height -
 -- Add some stuff to layout
 layout:addChild(GUI.roundedButton(2, 18, 30, 3, 0xFFFFFF, 0x555555, 0x880000, 0xFFFFFF, "desktop")).onTouch = function()
   shell.execute("/UntitledOS/System/desktop.lua")
+end
+
+layout:addChild(GUI.roundedButton(2, 21, 30, 3, 0xFFFFFF, 0x555555, 0x880000, 0xFFFFFF, "EXIT")).onTouch = function()
+  os.exit()
 end
 
 ------------------------------------------------------------------------------------------
