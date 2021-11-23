@@ -15,10 +15,10 @@ local menu = workspace:addChild(GUI.menu(1, 1, workspace.width, 0xEEEEEE, 0x6666
 local contextMenu = menu:addContextMenuItem("AntwitchOS")
 contextMenu:addItem("Power Options").onTouch = function()
 	local Power = GUI.addBackgroundContainer(workspace, true, true, " ")
-	Power.layout:addChild(GUI.framedButton(3, 1, 3, 3, 0xFFFFFF, 0xFFFFFF, 0x880000, 0x880000, "Power OFF")).onTouch = function()
+	Power.layout:addChild(GUI.roundedButton(3, 1, 6, 6, 0xFFFFFF, 0xFFFFFF, 0x880000, 0x880000, "Power OFF")).onTouch = function()
 		computer.shutdown()
 	end
-	Power.layout:addChild(GUI.framedButton(7, 1, 3, 3, 0xFFFFFF, 0xFFFFFF, 0x880000, 0x880000, "Reboot")).onTouch = function()
+	Power.layout:addChild(GUI.roundedButton(7, 1, 6, 6, 0xFFFFFF, 0xFFFFFF, 0x880000, 0x880000, "Reboot")).onTouch = function()
 		computer.shutdown(true)
 	end
 	workspace:draw()
