@@ -21,6 +21,9 @@ contextMenu:addItem("Power Options").onTouch = function()
 	Power.layout:addChild(GUI.roundedButton(7, 1, 10, 6, 0xFFFFFF, 0x555555, 0x880000, 0x880000, "Reboot")).onTouch = function()
 		computer.shutdown(true)
 	end
+	Power.layout:addChild(GUI.roundedButton(10, 1, 10, 6, 0xFFFFFF, 0x555555, 0x880000, 0x880000, "EXIT")).onTouch = function()
+		os.exit()
+	end
 	workspace:draw()
 	workspace:start()
 end
