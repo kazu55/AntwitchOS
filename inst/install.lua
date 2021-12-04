@@ -73,6 +73,10 @@ local files                     = {
         url  = "https://raw.githubusercontent.com/kazu55/AntwitchOS/master/power_force.lua",
         path = "/power_force.lua"
     },
+    {
+        url  = "https://raw.githubusercontent.com/kazu55/AntwitchOS/master/UntitledOS/Programs/file_explorer.lua",
+        path = "/UntitledOS/Programs/file_explorer.lua"
+    },
 }
 
 local properties                = {
