@@ -50,10 +50,6 @@ local files                     = {
         path = "/UntitledOS/System/sys-start.lua"
     },
 	{
-        url  = "https://raw.githubusercontent.com/kazu55/testos/master/UntitledOS/Programs/editor.lua",
-        path = "/UntitledOS/Programs/editor.lua"
-    },
-	{
         url  = "https://raw.githubusercontent.com/kazu55/testos/master/autorun.lua",
         path = "/autorun.lua"
     },
