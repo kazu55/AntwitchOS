@@ -2,7 +2,9 @@ local image = require("Image")
 local GUI = require("GUI")
 local shell = require("shell")
 local os = require("os")
+local comp = require("computer")
 
+computer.beep(1000, 0.6)
 ------------------------------------------------------------------------------------------
 
 local workspace = GUI.workspace()
