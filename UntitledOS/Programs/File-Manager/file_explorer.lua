@@ -5,7 +5,6 @@ local term = require("term")
 
 
 while true do
-  term.clear()
   print("Select the operation you want to perform (ls, edit, mkdir, exit, rm)?")
   operation = io.read()
   if operation == "ls" then
