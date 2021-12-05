@@ -15,5 +15,4 @@ local width, height = gpu.getResolution()
 local text = "AntwitchUI is Running..."
 
 gpu.set(width / 2 - #text / 2, height / 2, text)
-proc:detach()
 shell.execute("/UntitledOS/System/sys-start.lua")
