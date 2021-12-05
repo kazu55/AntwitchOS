@@ -54,8 +54,8 @@ local files                     = {
         path = "/autorun.lua"
     },
 	{
-        url  = "https://raw.githubusercontent.com/kazu55/testos/master/UntitledOS/Programs/download.lua",
-        path = "/UntitledOS/Programs/download.lua"
+        url  = "https://raw.githubusercontent.com/kazu55/testos/master/UntitledOS/Programs/File-Manager/download.lua",
+        path = "/UntitledOS/Programs/File-Manager/download.lua"
     },
     {
         url  = "https://raw.githubusercontent.com/kazu55/testos/master/lib/uac.lua",
@@ -63,15 +63,15 @@ local files                     = {
     },
     {
         url  = "https://raw.githubusercontent.com/kazu55/testos/master/inst/update.lua",
-        path = "/UntitledOS/Programs/update.lua"
+        path = "/UntitledOS/Programs/updater/update.lua"
     },
     {
         url  = "https://raw.githubusercontent.com/kazu55/AntwitchOS/master/power_force.lua",
         path = "/power_force.lua"
     },
     {
-        url  = "https://raw.githubusercontent.com/kazu55/AntwitchOS/master/UntitledOS/Programs/file_explorer.lua",
-        path = "/UntitledOS/Programs/file_explorer.lua"
+        url  = "https://raw.githubusercontent.com/kazu55/AntwitchOS/master/UntitledOS/Programs/File-Manager/file_explorer.lua",
+        path = "/UntitledOS/Programs/File-Manager/file_explorer.lua"
     },
 }
 
