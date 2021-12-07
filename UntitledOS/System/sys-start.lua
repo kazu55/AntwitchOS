@@ -3,8 +3,62 @@ local GUI = require("GUI")
 local shell = require("shell")
 local os = require("os")
 local comp = require("computer")
+local compo = require("component")
 
-comp.beep(1000, 0.6)
+if component.isAvailable("sound") then
+  local sound = require("component").sound
+  
+  
+  sound.open(1)
+  sound.setWave(1, sound.modes.sine)
+  sound.setFrequency(1, 1000)
+  sound.setVolume(1, 0.25)
+  sound.setADSR(1, 1000, 500, 0.33, 1000)
+  
+  sound.delay(1000)
+  
+  sound.open(2)
+  sound.setWave(2, sound.modes.triangle)
+  sound.setFrequency(2, 523)
+  sound.setVolume(2, 0.6)
+  sound.setADSR(2, 1, 250, 0, 1)
+  
+  sound.delay(750)
+  
+  sound.open(3)
+  sound.setWave(3, sound.modes.triangle)
+  sound.setFrequency(3, 659)
+  sound.setVolume(3, 0.6)
+  sound.setADSR(3, 1, 250, 0, 1)
+  
+  sound.delay(750)
+  
+  sound.open(4)
+  sound.setWave(4, sound.modes.triangle)
+  sound.setFrequency(4, 783)
+  sound.setVolume(4, 0.6)
+  sound.setADSR(4, 1, 250, 0, 1)
+  
+  sound.delay(750)
+  
+  sound.open(5)
+  sound.setWave(5, sound.modes.triangle)
+  sound.setFrequency(5, 1046)
+  sound.setVolume(5, 0.6)
+  sound.setADSR(5, 1, 250, 0, 1)
+  
+  sound.delay(1250)
+  
+  sound.open(6)
+  sound.setWave(6, sound.modes.triangle)
+  sound.setFrequency(6, 523)
+  sound.setVolume(6, 0.6)
+  sound.setADSR(6, 1, 250, 0, 1)
+  
+  sound.delay(500)
+  
+  sound.process()
+end
 ------------------------------------------------------------------------------------------
 
 local workspace = GUI.workspace()
