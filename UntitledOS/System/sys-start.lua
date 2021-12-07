@@ -5,8 +5,8 @@ local os = require("os")
 local comp = require("computer")
 local compo = require("component")
 
-if component.isAvailable("sound") then
-  local sound = require("component").sound
+if compo.isAvailable("sound") then
+  local sound = compo.sound
   
   
   sound.open(1)
