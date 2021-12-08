@@ -4,6 +4,7 @@ local fs                        = require("filesystem")
 local event                     = require("event")
 local gpu                       = component.gpu
 local internet                  = component.internet
+local sh = require("shell")
 
 ---------------------------------------------------------------------------------------------------------------------------------
 
@@ -37,42 +38,6 @@ local files                     = {
         url  = "https://raw.githubusercontent.com/kevinkk525/GUI/master/GUI.lua",
         path = "/lib/GUI.lua"
     },
-    {
-        url  = "https://raw.githubusercontent.com/kazu55/testos/master/UntitledOS/System/desktop.lua",
-        path = "/UntitledOS/System/desktop.lua"
-    },
-	{
-        url  = "https://raw.githubusercontent.com/kazu55/testos/master/lib/core/boot.lua",
-        path = "/lib/core/boot.lua"
-    },
-	{
-        url  = "https://raw.githubusercontent.com/kazu55/testos/master/UntitledOS/System/sys-start.lua",
-        path = "/UntitledOS/System/sys-start.lua"
-    },
-	{
-        url  = "https://raw.githubusercontent.com/kazu55/testos/master/autorun.lua",
-        path = "/autorun.lua"
-    },
-	{
-        url  = "https://raw.githubusercontent.com/kazu55/testos/master/UntitledOS/Programs/File-Manager/download.lua",
-        path = "/UntitledOS/Programs/File-Manager/download.lua"
-    },
-    {
-        url  = "https://raw.githubusercontent.com/kazu55/testos/master/lib/uac.lua",
-        path = "/lib/uac.lua"
-    },
-    {
-        url  = "https://raw.githubusercontent.com/kazu55/testos/master/inst/update.lua",
-        path = "/UntitledOS/Programs/updater/update.lua"
-    },
-    {
-        url  = "https://raw.githubusercontent.com/kazu55/AntwitchOS/master/power_force.lua",
-        path = "/power_force.lua"
-    },
-    {
-        url  = "https://raw.githubusercontent.com/kazu55/AntwitchOS/master/UntitledOS/Programs/File-Manager/file_explorer.lua",
-        path = "/UntitledOS/Programs/File-Manager/file_explorer.lua"
-    },
 }
 
 local properties                = {
@@ -86,13 +51,12 @@ local properties                = {
     -- Customize localization as you want to
     localization      = {
         -- Specify title of your installer
-        title         = "AntwitchOS Installer",
+        title         = "GUI-API Installer",
         -- Use <currentProgress>, <totalProgress> and <currentFile> text insertions to automatically display their values
         currentFile   = "Downloading \"<currentFile>\"",
         totalProgress = "Total progress: <totalProgress>%",
         -- Comment this lines to automatically close installer window
-        finished1     = "AntwitchOS has been successfully updated.",
-        finished2     = "Please restart your computer.",
+        finished1     = "GUI-API has been successfully downloaded.",
 	finished3     = "Press any key to quit."
     },
     -- Customize color scheme as you want to
@@ -289,6 +253,7 @@ if properties.localization.finished1 then
     while true do
         local eventType = event.pull()
         if eventType == "key_down" or eventType == "touch" then
+	    sh.execute("./installer.lua")
             break
         end
     end
