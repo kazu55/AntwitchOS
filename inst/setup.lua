@@ -4,6 +4,7 @@ local computer = require("computer")
 local term = require("term")
 local thread = require("thread")
 GUI = require("GUI")
+local io = require("io")
 local workspace = GUI.workspace()
 workspace:addChild(GUI.panel(1, 1, workspace.width, workspace.height, 0x2D2D2D))
 
