@@ -8,7 +8,7 @@ local io = require("io")
 local workspace = GUI.workspace()
 workspace:addChild(GUI.panel(1, 1, workspace.width, workspace.height, 0x2D2D2D))
 
-local files = io.open("./files.txt", "r")
+local files = fs.open("./files.txt", "r")
 
 local function install()
 	for i = 1, #files do
