@@ -27,8 +27,6 @@ local function download(url, path)
   shell.execute("wget -fq " .. url .. " " .. path)
 end
 
-download("https://raw.githubusercontent.com/kazu55/AntwitchOS/master/inst/setup2.lua", "./setup2.lua")
-
 local window3 = GUI.titledWindow(3, 3, 60, 20, "AntwitchOS Setup - Start", true)
 local layout1 = window3:addChild(GUI.layout(1, 2, window3.width, window3.height - 1, 1, 1))
 layout1:addChild(GUI.text(1, 1, 0x666666, "Hello, world. start-button click continue."))
