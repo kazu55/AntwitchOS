@@ -7,7 +7,13 @@ GUI = require("GUI")
 
 local files = io.open("./files.txt", "r")
 
-
+local function install()
+	for i = 1, #files do
+		download(files[i].url, files[i].path)
+	end
+	window3:remove()
+	workspace:draw()
+end
 
 
 
@@ -44,7 +50,7 @@ layout:addChild(GUI.text(1, 2, 0x666666, "The installation of AntwitchOS has sta
 layout:addChild(GUI.text(1, 3, 0x666666, "Please wait until it is installed..."))
 
 
-local proc = thread.create(for i = 1, #files do   download(files[i].url, files[i].path) end window3:remove() workspace:draw())
+local proc = thread.create(install())
 proc:detach()
 
 computer.shutdown(true)
