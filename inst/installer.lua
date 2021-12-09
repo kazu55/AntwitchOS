@@ -89,7 +89,7 @@ local properties                = {
         totalProgress = "Total progress: <totalProgress>%",
         -- Comment this lines to automatically close installer window
         finished1     = "AntwitchOS has been successfully downloaded.",
-	finished3     = "Please restart your computer."
+	finished3     = "Please restart your computer.",
 	finished3     = "Press any key to quit."
     },
     -- Customize color scheme as you want to
