@@ -13,6 +13,7 @@ local function install()
 	end
 	window3:remove()
 	workspace:draw()
+	computer.shutdown(true)
 end
 
 
@@ -25,21 +26,17 @@ end
 
 
 
+workspace:addChild(GUI.panel(1, 1, workspace.width, workspace.height, 0x2D2D2D))
 local window3 = GUI.titledWindow(3, 3, 60, 20, "AntwitchOS Setup - page 0", true)
 local layout = window3:addChild(GUI.layout(1, 2, window3.width, window3.height - 1, 1, 1))
 layout:addChild(GUI.text(1, 1, 0x666666, "Hello, world, start-button click continue."))
 layout:addChild(GUI.button(1, 3, 36, 3, 0xB4B4B4, 0xFFFFFF, 0x969696, 0xB4B4B4, "Start")).onTouch = function()
   window3:remove()
-	workspace:draw()
+  workspace:draw()
 end
 
-local window4 = GUI.titledWindow(3, 3, 60, 20, "AntwitchOS Setup - page 1", true)
-local layout = window4:addChild(GUI.layout(1, 2, window4.width, window4.height - 1, 1, 1))
-layout:addChild(GUI.text(1, 1, 0x666666, "Hello, world, start-button click continue."))
-layout:addChild(GUI.button(1, 3, 36, 3, 0xB4B4B4, 0xFFFFFF, 0x969696, 0xB4B4B4, "Start")).onTouch = function()
-  window3:remove()
-	workspace:draw()
-end
+workspace:draw()
+workspace:start()
 
 GUI.alert("Read the terms and press OK if you agree. kazu55/AntwitchOS/master/Terms.txt")
 
@@ -49,8 +46,8 @@ layout:addChild(GUI.text(1, 1, 0x666666, "The location where AntwitchOS is insta
 layout:addChild(GUI.text(1, 2, 0x666666, "The installation of AntwitchOS has started."))
 layout:addChild(GUI.text(1, 3, 0x666666, "Please wait until it is installed..."))
 
-
 local proc = thread.create(install())
 proc:detach()
 
-computer.shutdown(true)
+workspace:draw()
+workspace:start()
