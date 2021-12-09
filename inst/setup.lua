@@ -3,6 +3,7 @@ local shell = require("shell")
 local computer = require("computer")
 local thread = require("thread")
 GUI = require("GUI")
+local workspace = GUI.workspace()
 
 
 local files = io.open("./files.txt", "r")
