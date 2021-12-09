@@ -35,7 +35,19 @@ layout1:addChild(GUI.text(1, 1, 0x666666, "Hello, world. start-button click cont
 layout1:addChild(GUI.button(1, 3, 36, 3, 0xB4B4B4, 0xFFFFFF, 0x969696, 0xB4B4B4, "Start")).onTouch = function()
 	window3.remove()
 	term.clear()
-	shell.execute("./setup2.lua")
+	GUI.alert("Read the terms and press OK if you agree. kazu55/AntwitchOS/master/Terms.txt")
+	
+	local window5 = GUI.titledWindow(3, 3, 60, 20, "AntwitchOS Setup - Installing", true)
+	local layout2 = window5:addChild(GUI.layout(1, 2, window5.width, window5.height - 1, 1, 1))
+	layout2:addChild(GUI.text(1, 1, 0x666666, "The location where AntwitchOS is installed is /UntitledOS."))
+	layout2:addChild(GUI.text(1, 2, 0x666666, "The installation of AntwitchOS has started."))
+	layout2:addChild(GUI.text(1, 3, 0x666666, "Please wait until it is installed..."))
+	
+	local proc = thread.create(install())
+	proc:detach()
+	
+	workspace:draw()
+	workspace:start()
 end
 
 workspace:draw()
