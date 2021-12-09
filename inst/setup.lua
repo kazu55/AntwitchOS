@@ -35,7 +35,7 @@ layout:addChild(GUI.button(1, 3, 36, 3, 0xB4B4B4, 0xFFFFFF, 0x969696, 0xB4B4B4, 
 	workspace:draw()
 end
 
-GUI.alert("Read the terms and press OK if you agree.")
+GUI.alert("Read the terms and press OK if you agree. kazu55/AntwitchOS/master/Terms.txt")
 
 local window5 = GUI.titledWindow(3, 3, 60, 20, "AntwitchOS Setup - Installing", true)
 local layout = window5:addChild(GUI.layout(1, 2, window5.width, window5.height - 1, 1, 1))
