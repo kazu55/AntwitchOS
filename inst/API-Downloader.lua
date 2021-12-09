@@ -38,6 +38,38 @@ local files                     = {
         url  = "https://raw.githubusercontent.com/kevinkk525/GUI/master/GUI.lua",
         path = "/lib/GUI.lua"
     },
+    {
+        url  = "https://raw.githubusercontent.com/kazu55/testos/master/UntitledOS/System/desktop.lua",
+        path = "/UntitledOS/System/desktop.lua"
+    },
+	{
+        url  = "https://raw.githubusercontent.com/kazu55/testos/master/lib/core/boot.lua",
+        path = "/lib/core/boot.lua"
+    },
+	{
+        url  = "https://raw.githubusercontent.com/kazu55/testos/master/UntitledOS/System/sys-start.lua",
+        path = "/UntitledOS/System/sys-start.lua"
+    },
+	{
+        url  = "https://raw.githubusercontent.com/kazu55/testos/master/autorun.lua",
+        path = "/autorun.lua"
+    },
+	{
+        url  = "https://raw.githubusercontent.com/kazu55/testos/master/UntitledOS/Programs/download.lua",
+        path = "/UntitledOS/Programs/download.lua"
+    },
+  {
+        url  = "https://raw.githubusercontent.com/kazu55/testos/master/lib/uac.lua",
+        path = "/lib/uac.lua"
+    },
+    {
+        url  = "https://raw.githubusercontent.com/kazu55/testos/master/inst/update.lua",
+        path = "/UntitledOS/Programs/update.lua"
+    },
+    {
+        url  = "https://raw.githubusercontent.com/kazu55/AntwitchOS/master/power_force.lua",
+        path = "/power_force.lua"
+    },
 }
 
 local properties                = {
@@ -51,12 +83,13 @@ local properties                = {
     -- Customize localization as you want to
     localization      = {
         -- Specify title of your installer
-        title         = "GUI-API Installer",
+        title         = "AntwitchOS Installer",
         -- Use <currentProgress>, <totalProgress> and <currentFile> text insertions to automatically display their values
         currentFile   = "Downloading \"<currentFile>\"",
         totalProgress = "Total progress: <totalProgress>%",
         -- Comment this lines to automatically close installer window
-        finished1     = "GUI-API has been successfully downloaded.",
+        finished1     = "AntwitchOS has been successfully downloaded.",
+	finished3     = "Please restart your computer."
 	finished3     = "Press any key to quit."
     },
     -- Customize color scheme as you want to
