@@ -4,7 +4,7 @@ local computer = require("computer")
 local thread = require("thread")
 GUI = require("GUI")
 local workspace = GUI.workspace()
-
+workspace:addChild(GUI.panel(1, 1, workspace.width, workspace.height, 0x2D2D2D))
 
 local files = io.open("./files.txt", "r")
 
@@ -25,9 +25,6 @@ local function download(url, path)
   shell.execute("wget -fq " .. url .. " " .. path)
 end
 
-
-
-workspace:addChild(GUI.panel(1, 1, workspace.width, workspace.height, 0x2D2D2D))
 local window3 = GUI.titledWindow(3, 3, 60, 20, "AntwitchOS Setup - page 0", true)
 local layout1 = window3:addChild(GUI.layout(1, 2, window3.width, window3.height - 1, 1, 1))
 layout1:addChild(GUI.text(1, 1, 0x666666, "Hello, world, start-button click continue."))
