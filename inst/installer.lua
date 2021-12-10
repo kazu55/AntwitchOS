@@ -46,7 +46,7 @@ local files                     = {
         url  = "https://raw.githubusercontent.com/kazu55/testos/master/lib/core/boot.lua",
         path = "/lib/core/boot.lua"
     },
-	{
+    {
         url  = "https://raw.githubusercontent.com/kazu55/testos/master/UntitledOS/System/sys-start.lua",
         path = "/UntitledOS/System/sys-start.lua"
     },
