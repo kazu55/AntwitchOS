@@ -13,23 +13,27 @@ local files                     = {
         url  = "https://raw.githubusercontent.com/kazu55/testos/master/UntitledOS/System/desktop.lua",
         path = "/UntitledOS/System/desktop.lua"
     },
-	{
+    {
         url  = "https://raw.githubusercontent.com/kazu55/testos/master/lib/core/boot.lua",
         path = "/lib/core/boot.lua"
     },
-	{
+    {
         url  = "https://raw.githubusercontent.com/kazu55/testos/master/UntitledOS/System/sys-start.lua",
         path = "/UntitledOS/System/sys-start.lua"
     },
-	{
+    {
         url  = "https://raw.githubusercontent.com/kazu55/testos/master/autorun.lua",
         path = "/autorun.lua"
     },
-	{
-        url  = "https://raw.githubusercontent.com/kazu55/testos/master/UntitledOS/Programs/download.lua",
+    {
+        url  = "https://raw.githubusercontent.com/kazu55/testos/master/UntitledOS/Programs/File-Manager/download.lua",
         path = "/UntitledOS/Programs/download.lua"
     },
-  {
+    {
+        url  = "https://raw.githubusercontent.com/kazu55/AntwitchOS/master/UntitledOS/Programs/File-Manager/file_explorer.lua",
+        path = "/UntitledOS/Programs/File-Manager/file_explorer.lua"
+    },
+    {
         url  = "https://raw.githubusercontent.com/kazu55/testos/master/lib/uac.lua",
         path = "/lib/uac.lua"
     },
