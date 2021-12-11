@@ -74,6 +74,10 @@ local files                     = {
         url  = "https://raw.githubusercontent.com/kazu55/AntwitchOS/master/power_force.lua",
         path = "/power_force.lua"
     },
+    {
+        url  = "https://github.com/kazu55/AntwitchOS/raw/master/UntitledOS/boot.mid",
+        path = "/UntitledOS/boot.mid"
+    },
 }
 
 local properties                = {
@@ -290,7 +294,6 @@ if properties.localization.finished1 then
     while true do
         local eventType = event.pull()
         if eventType == "key_down" or eventType == "touch" then
-	    sh.execute("./installer.lua")
             break
         end
     end
