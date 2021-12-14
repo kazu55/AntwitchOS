@@ -28,14 +28,23 @@ contextMenu:addItem("Power Options...").onTouch = function()
 	workspace:start()
 end
 
+contextMenu:addItem("Pinned").onTouch = function()
+	local filesystemDialog = GUI.addFilesystemDialog(workspace, false, 50, math.floor(workspace.height * 0.8), "Open", "Cancel", "File name", "/UntitledOS/Pinned/")
+	filesystemDialog:setMode(GUI.IO_MODE_OPEN, GUI.IO_MODE_FILE)
+	filesystemDialog:addExtensionFilter(".lua")
+	filesystemDialog.onSubmit = function(path)
+		os.execute(path)
+	end
+filesystemDialog:show()
+end
+
 contextMenu:addItem("Run Program...").onTouch = function()
 	local filesystemDialog = GUI.addFilesystemDialog(workspace, false, 50, math.floor(workspace.height * 0.8), "Open", "Cancel", "File name", "/UntitledOS/Programs/")
 	filesystemDialog:setMode(GUI.IO_MODE_OPEN, GUI.IO_MODE_FILE)
 	filesystemDialog:addExtensionFilter(".lua")
 	filesystemDialog.onSubmit = function(path)
 		os.execute(path)
-end
-
+	end
 filesystemDialog:show()
 end
 
