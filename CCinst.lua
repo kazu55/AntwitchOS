@@ -1,6 +1,6 @@
 install = {
   title = 'AntwitchOS',
-  version = '',
+  version = 'Dev',
   author = 'TAMASAN',
   description = 'description'
   license = 'license',
