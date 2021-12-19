@@ -1,3 +1,4 @@
+loadAPI("/AntwitchOS/System/notification")
 rednet.open("top")
 while true do
   local senderId, message, protocol = rednet.receive()
