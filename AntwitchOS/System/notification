@@ -1,3 +1,4 @@
 notice = function(Contents)
-  shell.execute("bg /AntwitchOS/System/New-notification" .. Contents)
+  load = loadfile("bg /AntwitchOS/System/New-notification" .. Contents)
+  load(run)
 end
