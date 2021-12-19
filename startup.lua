@@ -1,4 +1,4 @@
-
+term.clear()
 term.setCursorPos(1,1)
 print("Starting Computer...")
 for i = 1, math.random(1,10) do
