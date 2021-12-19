@@ -1,0 +1,3 @@
+function notification(Contents)
+  shell.run("bg /AntwitchOS/System/New notification!")
+end
