@@ -1,5 +1,4 @@
-while true do
-  sleep(0)
-  term.setCursorPos(1,1)
-  print(Contents)
-end
+term.setCursorPos(1,1)
+print(Contents)
+print("Please Enter key...")
+read()
