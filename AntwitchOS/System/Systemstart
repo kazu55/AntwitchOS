@@ -1,0 +1,4 @@
+print("Starting AntMessage...")
+shell.run("bg /AntwitchOS/System/AntMessage")
+print("Starting notification...")
+shell.run("bg /AntwitchOS/System/notification")
