@@ -2,8 +2,8 @@ install = {
   title = 'AntwitchOS',
   version = 'Dev',
   author = 'TAMASAN',
-  description = [[description]],
-  license = [[licence]],
+  description = [[Not description.]],
+  license = [[Not licence.]],
   copyrightYear = 2021,
   copyrightHolders = 'TAMASAN',
   diskspace = 380000,
@@ -11,7 +11,7 @@ install = {
   gitRepo = 'kazu55/AntwitchOS',
   gitBranch = 'ComputerCraft',
   branches = {
-    { branch = 'ComputerCraft', description = '1.8+' },
+    { branch = 'ComputerCraft', description = 'not description.' },
   },
   preCopy = function(mode)
     if mode == 'update' then
