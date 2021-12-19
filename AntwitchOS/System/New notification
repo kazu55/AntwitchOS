@@ -1,6 +1,0 @@
-args = (...)
-
-term.setCursorPos(1,1)
-print(args)
-print("Please Enter key...")
-read()
