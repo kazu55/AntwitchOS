@@ -48,6 +48,8 @@ contextMenu:addItem("Run Program...").onTouch = function()
 filesystemDialog:show()
 end
 
+menu:addItem("Gametime: " .. os.date(), 0x0):setAlignment(GUI.ALIGNMENT_HORIZONTAL_RIGHT, GUI.ALIGNMENT_VERTICAL_TOP)
+
 --------------------------------------------------------------------------------
 
 workspace:draw()
