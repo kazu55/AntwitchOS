@@ -14,8 +14,6 @@ filesystemDialog.onSubmit = function(path)
   print("Select with edit, exit, rm.")
   operation = io.read()
   if operation == "edit" then
-    print("Which file to edit?")
-    edit_files = io.read()
     shell.execute("edit " .. path)
   end
   if operation == "rm" then
