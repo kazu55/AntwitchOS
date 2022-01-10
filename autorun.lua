@@ -10,7 +10,6 @@ local thread = require("thread")
 ----------------------------------------------------------------------------------------------------
 
 term.clear()
-local proc = thread.create(os.execute, "/power_force.lua")
 local width, height = gpu.getResolution()
 local text = "AntwitchUI is Running..."
 
