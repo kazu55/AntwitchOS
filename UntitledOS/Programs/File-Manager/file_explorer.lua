@@ -7,7 +7,7 @@ local os = require("os")
 
 local workspace = GUI.workspace()
 workspace:addChild(GUI.panel(1, 1, workspace.width, workspace.height, 0x2D2D2D))
-
+while true do
 local filesystemDialog = GUI.addFilesystemDialog(workspace, false, 50, math.floor(workspace.height * 0.8), "Open", "Cancel", "File name", "/")
 filesystemDialog:setMode(GUI.IO_MODE_OPEN, GUI.IO_MODE_FILE)
 filesystemDialog.onSubmit = function(path)
@@ -17,18 +17,18 @@ filesystemDialog.onSubmit = function(path)
     shell.execute("edit " .. path)
   end
   if operation == "rm" then
-    shell.execute("rm " .. path)
+      shell.execute("rm " .. path)
   end
   if operation == "exit" then
     os.exit()
   end
   os.sleep(0)
-end
 
-filesystemDialog:show()
+
+  filesystemDialog:show()
 
 --------------------------------------------------------------------------------
 
-workspace:draw()
-workspace:start()
-
+  workspace:draw()
+  workspace:start()
+end
