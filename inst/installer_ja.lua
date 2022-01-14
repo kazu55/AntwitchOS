@@ -39,35 +39,35 @@ local files                     = {
         path = "/lib/GUI.lua"
     },
     {
-        url  = "https://raw.githubusercontent.com/kazu55/testos/master/UntitledOS/System/desktop.lua",
+        url  = "https://raw.githubusercontent.com/kazu55/testos/OpenComputers_ja_JP/UntitledOS/System/desktop.lua",
         path = "/UntitledOS/System/desktop.lua"
     },
     {
-        url  = "https://raw.githubusercontent.com/kazu55/testos/master/lib/core/boot.lua",
+        url  = "https://raw.githubusercontent.com/kazu55/testos/OpenComputers_ja_JP/lib/core/boot.lua",
         path = "/lib/core/boot.lua"
     },
     {
-        url  = "https://raw.githubusercontent.com/kazu55/testos/master/UntitledOS/System/sys-start.lua",
+        url  = "https://raw.githubusercontent.com/kazu55/testos/OpenComputers_ja_JP/UntitledOS/System/sys-start.lua",
         path = "/UntitledOS/System/sys-start.lua"
     },
     {
-        url  = "https://raw.githubusercontent.com/kazu55/testos/master/autorun.lua",
+        url  = "https://raw.githubusercontent.com/kazu55/testos/OpenComputers_ja_JP/autorun.lua",
         path = "/autorun.lua"
     },
     {
-        url  = "https://raw.githubusercontent.com/kazu55/testos/master/UntitledOS/Programs/File-Manager/download.lua",
+        url  = "https://raw.githubusercontent.com/kazu55/testos/OpenComputers_ja_JP/UntitledOS/Programs/File-Manager/download.lua",
         path = "/UntitledOS/Programs/download.lua"
     },
     {
-        url  = "https://raw.githubusercontent.com/kazu55/AntwitchOS/master/UntitledOS/Programs/File-Manager/file_explorer.lua",
+        url  = "https://raw.githubusercontent.com/kazu55/AntwitchOS/OpenComputers_ja_JP/UntitledOS/Programs/File-Manager/file_explorer.lua",
         path = "/UntitledOS/Programs/File-Manager/file_explorer.lua"
     },
     {
-        url  = "https://raw.githubusercontent.com/kazu55/testos/master/lib/uac.lua",
+        url  = "https://raw.githubusercontent.com/kazu55/testos/OpenComputers_ja_JP/lib/uac.lua",
         path = "/lib/uac.lua"
     },
     {
-        url  = "https://raw.githubusercontent.com/kazu55/testos/master/inst/update.lua",
+        url  = "https://raw.githubusercontent.com/kazu55/testos/OpenComputers_ja_JP/inst/update.lua",
         path = "/UntitledOS/Programs/update.lua"
     },
 }
