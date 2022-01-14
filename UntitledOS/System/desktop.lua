@@ -13,22 +13,22 @@ local panel = workspace:addChild(GUI.panel(1, 1, workspace.width, workspace.heig
 local menu = workspace:addChild(GUI.menu(1, 1, workspace.width, 0xEEEEEE, 0x666666, 0x3366CC, 0xFFFFFF))
 -- Add first item with black color. Attack a callback-function to it
 local contextMenu = menu:addContextMenuItem("Applications")
-contextMenu:addItem("Power Options...").onTouch = function()
+contextMenu:addItem("電源オプション").onTouch = function()
 	local Power = GUI.addBackgroundContainer(workspace, true, true, " ")
-	Power.layout:addChild(GUI.roundedButton(3, 1, 10, 6, 0xFFFFFF, 0x555555, 0x880000, 0x880000, "Power OFF")).onTouch = function()
+	Power.layout:addChild(GUI.roundedButton(3, 1, 10, 6, 0xFFFFFF, 0x555555, 0x880000, 0x880000, "シャットダウン")).onTouch = function()
 		computer.shutdown()
 	end
-	Power.layout:addChild(GUI.roundedButton(7, 1, 10, 6, 0xFFFFFF, 0x555555, 0x880000, 0x880000, "Reboot")).onTouch = function()
+	Power.layout:addChild(GUI.roundedButton(7, 1, 10, 6, 0xFFFFFF, 0x555555, 0x880000, 0x880000, "再起動")).onTouch = function()
 		computer.shutdown(true)
 	end
-	Power.layout:addChild(GUI.roundedButton(10, 1, 10, 6, 0xFFFFFF, 0x555555, 0x880000, 0x880000, "EXIT")).onTouch = function()
+	Power.layout:addChild(GUI.roundedButton(10, 1, 10, 6, 0xFFFFFF, 0x555555, 0x880000, 0x880000, "ログアウト")).onTouch = function()
 		os.exit()
 	end
 	workspace:draw()
 	workspace:start()
 end
 
-contextMenu:addItem("Pinned").onTouch = function()
+contextMenu:addItem("ピン留め済み").onTouch = function()
 	local filesystemDialog = GUI.addFilesystemDialog(workspace, false, 50, math.floor(workspace.height * 0.8), "Open", "Cancel", "File name", "/UntitledOS/Pinned/")
 	filesystemDialog:setMode(GUI.IO_MODE_OPEN, GUI.IO_MODE_FILE)
 	filesystemDialog:addExtensionFilter(".lua")
@@ -38,7 +38,7 @@ contextMenu:addItem("Pinned").onTouch = function()
 filesystemDialog:show()
 end
 
-contextMenu:addItem("Run Program...").onTouch = function()
+contextMenu:addItem("ファイル名を指定して実行").onTouch = function()
 	local filesystemDialog = GUI.addFilesystemDialog(workspace, false, 50, math.floor(workspace.height * 0.8), "Open", "Cancel", "File name", "/UntitledOS/Programs/")
 	filesystemDialog:setMode(GUI.IO_MODE_OPEN, GUI.IO_MODE_FILE)
 	filesystemDialog:addExtensionFilter(".lua")
