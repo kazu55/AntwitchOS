@@ -64,15 +64,15 @@ end
 local workspace = GUI.workspace()
 workspace:addChild(GUI.panel(1, 1, workspace.width, workspace.height, 0x1E1E1E))
 
-local window3 = workspace:addChild(GUI.titledWindow(50, 22, 60, 20, "Start", true))
+local window3 = workspace:addChild(GUI.titledWindow(50, 22, 60, 20, "スタートメニュー", true))
 -- Attach an single cell layout to it
 local layout = window3:addChild(GUI.layout(1, 2, window3.width, window3.height - 1, 1, 1))
 -- Add some stuff to layout
-layout:addChild(GUI.roundedButton(2, 18, 30, 3, 0xFFFFFF, 0x555555, 0x880000, 0xFFFFFF, "desktop")).onTouch = function()
+layout:addChild(GUI.roundedButton(2, 18, 30, 3, 0xFFFFFF, 0x555555, 0x880000, 0xFFFFFF, "ログイン")).onTouch = function()
   shell.execute("/UntitledOS/System/desktop.lua")
 end
 
-layout:addChild(GUI.roundedButton(2, 21, 30, 3, 0xFFFFFF, 0x555555, 0x880000, 0xFFFFFF, "EXIT")).onTouch = function()
+layout:addChild(GUI.roundedButton(2, 21, 30, 3, 0xFFFFFF, 0x555555, 0x880000, 0xFFFFFF, "終了")).onTouch = function()
   os.exit()
 end
 
